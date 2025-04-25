@@ -42,8 +42,11 @@ public class RespostaListaExercicio {
 	  imprimirArrayInverso(array);*/
 	  
 	  //numero primo
-	  int [] array = {10,20,5,7,8};
-	  imprimirElementosPrimos(array);
+	  /*int [] array = {10,20,5,7,8};
+	  imprimirElementosPrimos(array);*/
+	  
+	  int [] array = {3, 2 ,7 ,6};
+	  imprimirElementosImpares(array);
 	  
 	 
 }
@@ -177,7 +180,13 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirElementosImpares(int[] array) 
 	{
-		System.out.print("");
+		for(int j:array) {
+			if(j  % 2 != 0) {
+				
+				System.out.print(j + " ");
+			}
+			
+		}
 	}
 	
 	
