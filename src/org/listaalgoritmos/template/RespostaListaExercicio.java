@@ -8,10 +8,30 @@ public class RespostaListaExercicio {
 	 * Utilize apenas o método main para testar a implementação dos métodos. 
 	 * Não se faz necessário implementar dentro do escopo do método.
 	 */
+
 	public static void main(String[] args) {
-		
+	  
+	  //calculo do imc
+	  float  resultado = calcularImc(70f , 1.85f);
+	  System.out.println("IMC:" + resultado);
+	  
+	  
+	  //calculo da area do trapezio
+	  float area = calcularAreaTrapezio(100f , 70f ,1.70f);
+	  System.out.println("Area:" + area);
+	  
+	  
+	  //maior Entre Dois Inteiros
+	  int maior = maiorEntreDoisInteiros(30 , 40);
+	  System.out.println("O maior é:"+ maior);
+	  
+	  
+	  //numero impar
+	  boolean impar = verificarParImpar(10);
+	  System.out.println("O numero é:" + impar);
+	  
 	}
-	
+		
 	/**
 	 * Método deve calcular o IMC utilizando peso e altura. Como resultado
 	 * o método deve retornar uma variável resultado do tipo float.
@@ -21,8 +41,12 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularImc(float peso, float altura) 
 	{
-		return 0f;
+		return  peso / (altura * altura);
+		
+		
+
 	}
+
 	
 	/**
 	 * Método deve calcular a área do trapézio independente da unidade de medida.
@@ -34,7 +58,8 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularAreaTrapezio(float baseMaior, float baseMenor, float altura) 
 	{	
-		return 0f;
+		return ((baseMaior + baseMenor) * altura) /2;
+		
 	}
 	
 	/**
@@ -47,7 +72,11 @@ public class RespostaListaExercicio {
 	 */
 	public static int maiorEntreDoisInteiros(int a, int b) 
 	{
-		return 0;
+		if(a < b) {
+			return b;
+		}else {
+			return a;
+		}
 	}
 	
 	/**
@@ -59,7 +88,9 @@ public class RespostaListaExercicio {
 	 */
 	public static boolean verificarParImpar(int numero) 
 	{
-		return false;		
+		return numero%2 != 0;
+	
+		
 	}
 	
 	/**
