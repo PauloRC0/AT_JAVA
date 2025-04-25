@@ -48,8 +48,12 @@ public class RespostaListaExercicio {
 	  /*int [] array = {3, 2 ,7 ,6};
 	  imprimirElementosImpares(array);*/
 	  
-	  int [] array = {3, 2 ,7 ,6};
-	  imprimirElementosPares(array);
+	  /*int [] array = {3, 2 ,7 ,6};
+	  imprimirElementosPares(array);*/
+	  
+	  int [] array = {3, 10 ,7 ,6};
+	  imprimirMaiorMenorElemento(array);
+	  
 	  
 	 
 }
@@ -217,9 +221,20 @@ public class RespostaListaExercicio {
 	 * após o último elemento. Utilize System.out.print()
 	 * @param array
 	 */
-	public static void imprimirMaiorMenorElemento(int[] array) 
-	{
-		System.out.print("");
+	public static void imprimirMaiorMenorElemento(int[] array) {   
+	    int maior = array[0];
+	    int menor = array[0];
+
+	    for (int i : array) {
+	        if (i > maior) {
+	            maior = i;
+	        }
+	        if (i < menor) {
+	            menor = i;
+	        }
+	    }
+
+	    System.out.println(maior + " " + menor);
 	}
 	
 	/**
