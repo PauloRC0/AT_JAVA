@@ -30,7 +30,19 @@ public class RespostaListaExercicio {
 	  boolean impar = verificarParImpar(10);
 	  System.out.println("O numero é:" + impar);
 	  
-	}
+	  
+	  //media das notas 
+	  float [] notas = {10f , 20f ,  30f , 40f};
+	  float media =  calcularMediaNotas(notas);
+	  System.out.println("A media é:" + media);
+	  
+	  
+	  //array inverso
+	  int [] array = {10 , 20 ,30 , 40};
+	  imprimirArrayInverso(array);
+	 
+}
+	  
 		
 	/**
 	 * Método deve calcular o IMC utilizando peso e altura. Como resultado
@@ -100,7 +112,13 @@ public class RespostaListaExercicio {
 	 * @return media
 	 */
 	public static float calcularMediaNotas(float[] notas) {
-		return 0f;
+		float soma = 0;
+		
+		for(int i = 0; i < notas.length; i++){
+			
+			soma += notas[i];
+		}
+		return soma/notas.length;
 	}
 	
 	/**
@@ -111,9 +129,17 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirArrayInverso(int[] array)
 	{
-		System.out.print("");
+		int inverso = 0;
+		
+		for(int i = array.length -1; i >= 0; i--) {
+			
+			inverso = array[i];
+			
+			System.out.println("o array é:" + inverso);
+		}
+		
 	}
-	
+	 
 	/**
 	 * Método deve imprimir os elementos primos de um array de inteiros. O formato da impressão 
 	 * deve ser feito numa única linha, utilizando espaço em branco (" ") entre os elementos e 
