@@ -51,8 +51,11 @@ public class RespostaListaExercicio {
 	  /*int [] array = {3, 2 ,7 ,6};
 	  imprimirElementosPares(array);*/
 	  
+	  /*int [] array = {3, 10 ,7 ,6};
+	  imprimirMaiorMenorElemento(array);*/
+	  
 	  int [] array = {3, 10 ,7 ,6};
-	  imprimirMaiorMenorElemento(array);
+	  calcularMediaAritmetica(array);
 	  
 	  
 	 
@@ -243,9 +246,12 @@ public class RespostaListaExercicio {
 	 * @param array
 	 * @return media
 	 */
-	public static float calcularMediaAritmetica(int[] array) 
-	{
-		return 0f;
+	public static float calcularMediaAritmetica(int[] array) {
+	    int soma = 0;
+	    for (int num : array) {
+	        soma += num;
+	    }
+	    return (float) soma / array.length;
 	}
 	
 }
