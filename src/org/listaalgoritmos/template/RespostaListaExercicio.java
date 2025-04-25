@@ -38,8 +38,8 @@ public class RespostaListaExercicio {
 	  
 	  
 	  //array inverso
-	  /*int [] array = {10 , 20 ,30 , 40};
-	  imprimirArrayInverso(array);*/
+	  int [] array = {10 , 20 ,30 , 40};
+	  imprimirArrayInverso(array);
 	  
 	  //numero primo
 	  /*int [] array = {10,20,5,7,8};
@@ -54,8 +54,8 @@ public class RespostaListaExercicio {
 	  /*int [] array = {3, 10 ,7 ,6};
 	  imprimirMaiorMenorElemento(array);*/
 	  
-	  int [] array = {3, 10 ,7 ,6};
-	  calcularMediaAritmetica(array);
+	  /*int [] array = {3, 10 ,7 ,6};
+	  calcularMediaAritmetica(array);*/
 	  
 	  
 	 
@@ -71,7 +71,8 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularImc(float peso, float altura) 
 	{
-		return  peso / (altura * altura);
+		float resultado = peso / (altura * altura);
+		return resultado;
 		
 		
 
@@ -117,8 +118,9 @@ public class RespostaListaExercicio {
 	 * @return condicao
 	 */
 	public static boolean verificarParImpar(int numero) 
-	{
-		return numero%2 != 0;
+	{   
+		boolean condicao = numero %2 == 0; 
+		return condicao;
 	
 		
 	}
@@ -150,9 +152,13 @@ public class RespostaListaExercicio {
 		
 		for(int i = array.length -1; i >= 0; i--) {
 			
-			
-			System.out.println(array[i] + "");
-		}
+			System.out.print(array[i]);
+			if(i > 0) {
+				
+				
+				System.out.print(",");
+			}
+	 }
 		
 	}
 	 
@@ -236,9 +242,8 @@ public class RespostaListaExercicio {
 	            menor = i;
 	        }
 	    }
-
-	    System.out.println(maior + " " + menor);
-	}
+	    System.out.print(maior + " " + menor + " ");
+	  }
 	
 	/**
 	 * O método calcula a média aritmética dos elementos de um array de inteiros. 
