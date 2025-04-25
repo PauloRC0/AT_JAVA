@@ -38,8 +38,13 @@ public class RespostaListaExercicio {
 	  
 	  
 	  //array inverso
-	  int [] array = {10 , 20 ,30 , 40};
-	  imprimirArrayInverso(array);
+	  /*int [] array = {10 , 20 ,30 , 40};
+	  imprimirArrayInverso(array);*/
+	  
+	  //numero primo
+	  int [] array = {10,20,5,7,8};
+	  imprimirElementosPrimos(array);
+	  
 	 
 }
 	  
@@ -129,13 +134,11 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirArrayInverso(int[] array)
 	{
-		int inverso = 0;
 		
 		for(int i = array.length -1; i >= 0; i--) {
 			
-			inverso = array[i];
 			
-			System.out.println("o array é:" + inverso);
+			System.out.println(array[i] + "");
 		}
 		
 	}
@@ -146,10 +149,24 @@ public class RespostaListaExercicio {
 	 * após o último elemento. Utilize System.out.print()
 	 * @param array
 	 */
-	public static void imprimirElementosPrimos(int[] array) 
-	{
-		System.out.print("");
-	}
+    public static void imprimirElementosPrimos(int[] array) {
+        for (int j : array) {
+            int contador = 0;
+
+         
+            for (int i = 2; i < j; i++) {
+                if (j % i == 0) {
+                    contador++; 
+                    break; 
+                }
+            }
+
+          
+            if (contador == 0 && j > 1) {
+                System.out.print(j + " "); 
+            }
+        }
+    }
 	
 	
 	/**
