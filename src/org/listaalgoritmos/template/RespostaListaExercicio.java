@@ -45,8 +45,11 @@ public class RespostaListaExercicio {
 	  /*int [] array = {10,20,5,7,8};
 	  imprimirElementosPrimos(array);*/
 	  
+	  /*int [] array = {3, 2 ,7 ,6};
+	  imprimirElementosImpares(array);*/
+	  
 	  int [] array = {3, 2 ,7 ,6};
-	  imprimirElementosImpares(array);
+	  imprimirElementosPares(array);
 	  
 	 
 }
@@ -198,7 +201,13 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirElementosPares(int[] array) 
 	{
-		System.out.print("");
+		for(int j:array) {
+			
+			if(j %2 == 0) {
+				
+				System.out.print(j + " ");
+			}
+		}
 	}
 	
 	
